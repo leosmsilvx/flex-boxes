@@ -1,7 +1,9 @@
 # Flex Boxes
 Website that shows how flexboxes works and helps people to understand it.
 
-Still not responsive for mobile
+- Visit the website: https://flex-boxes-olive.vercel.app/
+
+Still not responsive for mobile.
 
 ## Preview
 - ### index
