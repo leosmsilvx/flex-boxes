@@ -39,6 +39,10 @@ body{
     width: 100%;
 }
 
+.subtitle-main-title{
+    color: white;
+}
+
 .buttons{
     width: 15%;
     display: flex;
@@ -78,6 +82,7 @@ body{
     cursor: pointer;
     text-decoration: underline;
     text-decoration-color: #c0006a;
+    color: white;
 }
 
 .button-click:hover{
