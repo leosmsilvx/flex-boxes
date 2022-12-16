@@ -160,6 +160,22 @@ body{
     font-weight: 600;
 }
 
+.hrow{
+    padding-top: 4%;
+    width: 100%;
+    border-bottom: solid  1px grey;
+}
+
+.footer{
+    padding-top: 10px;
+}
+.all-rights-txt{
+    font-size: 13px;
+    font-family: sans-serif;
+    text-align: center;
+    color: grey;
+}
+
 /*Main css*/
 
 #container-1{
