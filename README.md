@@ -1,7 +1,7 @@
 # Flex Boxes
 Website that shows how flexboxes works and helps people to understand it.
 
-- Visit the website: https://flex-boxes-olive.vercel.app/
+- Visit the website: https://flex-boxes-leosmsilvx.vercel.app/
 
 Still not responsive for mobile.
 
