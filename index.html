@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Flex</title>
+</head>
+<body>
+    <div class="main">  
+        <div class="main-title">
+            Flex Boxes
+        </div>
+        <div class="main-container">
+            <div class="container-border">
+                <div class="container-title">
+                    <div class="container-main-title">
+                        Main container
+                    </div>
+                    <div class="reset-title">
+                        <a class="button-click" onclick="reset()">Reset</a>
+                    </div>
+                </div>
+                <div class="container" id="container-1">
+                    <div class="item" id="item-1">
+                        Item 1
+                    </div>
+                    <div class="item" id="item-2">
+                        Item 2
+                    </div>
+                    <div class="item" id="item-3">
+                        Item 3
+                    </div>
+                </div> 
+                <div class="container-text">
+                    <a id="style-text">flex-direction: row; justify-content: start; align-items: flex-start; gap: 5px;</a>
+                </div>
+            </div>
+            <div class="buttons">
+                <div class="button-title">
+                    Main Contaier
+                </div>
+                <div class="button-subtitle">
+                    flex-direction
+                </div>
+                <div class="button-options">                    
+                    <div class="button-option">
+                        <span>-</span>
+                        <a class="button-click" onclick="clickStyle('container-1', 'flex-direction', 'row')">row</a>
+                    </div>
+                    <div class="button-option">
+                        <span>-</span>
+                        <a class="button-click" onclick="clickStyle('container-1', 'flex-direction', 'column')">column</a>
+                    </div>
+                </div>
+                
+                <div class="button-subtitle">
+                    justify-content
+                </div>
+                <div class="button-options">                    
+                    <div class="button-option">
+                        <span>-</span>
+                        <a class="button-click" onclick="clickStyle('container-1', 'justify-content', 'start')">start</a>
+                    </div>
+                    <div class="button-option">
+                        <span>-</span>
+                        <a class="button-click" onclick="clickStyle('container-1', 'justify-content', 'center')">center</a>
+                    </div>
+                    <div class="button-option">
+                        <span>-</span>
+                        <a class="button-click" onclick="clickStyle('container-1', 'justify-content', 'end')">end</a>
+                    </div>
+                    <div class="button-option">
+                        <span>-</span>
+                        <a class="button-click" onclick="clickStyle('container-1', 'justify-content', 'space-between')">space-between</a>
+                    </div>
+                    <div class="button-option">
+                        <span>-</span>
+                        <a class="button-click" onclick="clickStyle('container-1', 'justify-content', 'space-around')">space-around</a>
+                    </div>
+                    <div class="button-option">
+                        <span>-</span>
+                        <a class="button-click" onclick="clickStyle('container-1', 'justify-content', 'space-evenly')">space-evenly</a>
+                    </div>
+                </div>
+
+                <div class="button-subtitle">
+                    align-items
+                </div>
+                <div class="button-options">                    
+                    <div class="button-option">
+                        <span>-</span>
+                        <a class="button-click" onclick="clickStyle('container-1', 'align-items', 'flex-start')">flex-start</a>
+                    </div>
+                    <div class="button-option">
+                        <span>-</span>
+                        <a class="button-click" onclick="clickStyle('container-1', 'align-items', 'center')">center</a>
+                    </div>
+                    <div class="button-option">
+                        <span>-</span>
+                        <a class="button-click" onclick="clickStyle('container-1', 'align-items', 'flex-end')">flex-end</a>
+                    </div>
+                </div>
+
+                <div class="button-subtitle">
+                    gap
+                </div>
+                <div class="button-options">                    
+                    	<input class="input-option" id="gap" type="range" min="0" max="370" step="1" value="5" onchange="rangeStyle('container-1','gap', 'gapValue', 'gap')">
+                        <div>
+                            <a class="input-range-value" id="gapValue">5px</a>
+                        </div>                        
+                </div>
+            </div>
+            <div class="buttons">
+                <div class="button-title">
+                    Items
+                </div>
+                <div class="button-subtitle">
+                    Item 1
+                </div>
+                <div class="button-options">
+                    <div class="button-option-subtitle">
+                        align-self
+                    </div>
+                    <div class="button-option button-item">
+                        <span>-</span>
+                        <a class="button-click" onclick="clickStyle('item-1', 'align-self', 'flex-start')">flex-start</a>
+                    </div>
+                    <div class="button-option button-item">
+                        <span>-</span>
+                        <a class="button-click" onclick="clickStyle('item-1', 'align-self', 'center')">center</a>
+                    </div>
+                    <div class="button-option button-item">
+                        <span>-</span>
+                        <a class="button-click" onclick="clickStyle('item-1', 'align-self', 'flex-end')">flex-end</a>
+                    </div>
+
+                    <div class="button-option-subtitle">
+                        flex-grow
+                    </div>
+                    <div class="button-option button-item">
+                        <input class="input-option" id="grow-1" type="range" min="0" max="3" step="1" value="0" onchange="rangeStyle('item-1','grow-1', 'grow-1-value', 'flex-grow')">
+                        <div>
+                            <a class="input-range-value" id="grow-1-value">0</a>
+                        </div>  
+                    </div>
+                </div>
+                <div class="button-subtitle">
+                    Item 2
+                </div>
+                <div class="button-options">
+                    <div class="button-option-subtitle">
+                        align-self
+                    </div>
+                    <div class="button-option button-item">
+                        <span>-</span>
+                        <a class="button-click" onclick="clickStyle('item-2', 'align-self', 'flex-start')">flex-start</a>
+                    </div>
+                    <div class="button-option button-item">
+                        <span>-</span>
+                        <a class="button-click" onclick="clickStyle('item-2', 'align-self', 'center')">center</a>
+                    </div>
+                    <div class="button-option button-item">
+                        <span>-</span>
+                        <a class="button-click" onclick="clickStyle('item-2', 'align-self', 'flex-end')">flex-end</a>
+                    </div>
+
+                    <div class="button-option-subtitle">
+                        flex-grow
+                    </div>
+                    <div class="button-option button-item">
+                        <input class="input-option" id="grow-2" type="range" min="0" max="3" step="1" value="0" onchange="rangeStyle('item-2','grow-2', 'grow-2-value', 'flex-grow')">
+                        <div>
+                            <a class="input-range-value" id="grow-2-value">0</a>
+                        </div>  
+                    </div>
+                </div>
+                <div class="button-subtitle">
+                    Item 3
+                </div>
+                <div class="button-options">
+                    <div class="button-option-subtitle">
+                        align-self
+                    </div>
+                    <div class="button-option button-item">
+                        <span>-</span>
+                        <a class="button-click" onclick="clickStyle('item-3', 'align-self', 'flex-start')">flex-start</a>
+                    </div>
+                    <div class="button-option button-item">
+                        <span>-</span>
+                        <a class="button-click" onclick="clickStyle('item-3', 'align-self', 'center')">center</a>
+                    </div>
+                    <div class="button-option button-item">
+                        <span>-</span>
+                        <a class="button-click" onclick="clickStyle('item-3', 'align-self', 'flex-end')">flex-end</a>
+                    </div>
+
+                    <div class="button-option-subtitle">
+                        flex-grow
+                    </div>
+                    <div class="button-option button-item">
+                        <input class="input-option" id="grow-3" type="range" min="0" max="3" step="1" value="0" onchange="rangeStyle('item-3','grow-3', 'grow-3-value', 'flex-grow')">
+                        <div>
+                            <a class="input-range-value" id="grow-3-value">0</a>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div> 
+    <script src="script.js"></script>
+</body>
+</html>

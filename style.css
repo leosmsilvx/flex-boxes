@@ -1,0 +1,258 @@
+/*Frufruzinho css*/
+html{
+    scroll-behavior:smooth
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    word-spacing: 1.4px;
+    font-family: sans-serif;
+    background-color: #0f0f0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+}
+
+.container-border{
+    width: 70%;
+    border-radius: 10px;
+    background-image: linear-gradient(45deg, #0c0007, #c0006a, #0c0007);
+    box-shadow: 30px 20px 30px black;
+    background-size: 500% 100%;    
+    animation: gradiente 5s infinite alternate;
+    padding: 5px;
+    margin-top: 5%;
+}
+
+.main-container{
+    display: flex;
+    width: 100%;
+}
+
+.buttons{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 8%;
+    color: white;
+    border-right: solid 1px #c0006a;
+
+}
+
+.button-title{
+    padding-left: 5%;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.button-subtitle{
+    padding-left: 10%;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.button-options{
+    margin-left: 15%;
+}
+
+.button-item{
+    margin-left: 10%;
+}
+
+.input-option{
+    accent-color: #c0006a;
+}
+
+.button-click{
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: #c0006a;
+}
+
+.button-click:hover{
+    color: #c0006a;
+}
+
+.button-option-subtitle{
+    font-weight: 600;
+}
+
+@keyframes gradiente {
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 100%;
+    }
+}
+
+.container{
+    padding: 1%;
+    margin: 0 auto;
+    height: 800px; 
+    background-color: #0f0f0f;
+    border-radius: 8px;
+}
+
+.container:hover{
+    background-color: #111111;
+}
+
+.item{
+    width: 100px;
+    height: 100px;
+    background-color: #5a00c0;
+    padding: 1em;
+    font-weight: 800;
+    color: #eee;
+    text-align: center;
+    border: solid 8px #340070;
+    border-radius: 6px;
+}
+
+.item:hover{
+    background-color: #6202cf;
+    color: white;
+}
+
+.container-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: white;
+}
+
+.main-title{
+    font-size: 50px;
+    font-weight: 800;
+    color: white;
+}
+
+.main-title:hover{
+    color: #c0006a;
+}
+
+.container-text{
+    padding-right: 6px;
+    padding-top: 3px;
+    text-align: end;
+    text-shadow: #eee;
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+}
+
+.container-main-title{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/*Main css*/
+
+#container-1{
+    display: flex;
+    flex-direction: row;
+    /*
+    seta o eixo principal
+    default: row; alinhamento horizontal
+    column; alinhamento vertical
+    */ 
+    justify-content: start;
+    /*
+    Alinha os itens no eixo principal
+    default: start; começo
+    center; centro
+    end; fim
+
+    space-between: cria espaços proporcionais ao tamanho da div, sem espaços nas pontas
+    space-around; cria espaços, com espaço nas pontas, não proporcional
+    space-evenly: cria espaços, com espaço nas pontas, proporcional
+    */ 
+    align-items: flex-start;
+    /*
+    Alinha os itens no eixo que cruza o eixo secundario
+    default: flex-start; começo
+    center; centro
+    flex-end; fim
+
+    baseline: alinha os itens fazendo com que eles estejam alinhados pelo texto
+    aumente o tamanho de um dos textos para ver
+    */
+    flex-wrap: nowrap;
+    /*
+    Coloque mais itens para ver o efeito
+    default: nowrap;
+    wrap: separa os itens quando possivel, descendo eles na div
+    */
+    /*align-content: flex-start;*/
+    /*
+    Só funciona quando o flex-wrap for wrap e tiver itens suficiente
+    Funciona como o justify-content mas para os itens que estão fazendo "wraping"
+    */
+    gap: 5px;
+    /*
+    Seta espaço entre os itens
+    default: 0;
+    */
+}
+
+#item-3{
+    /*flex-grow: 0;*/
+    /*
+    default: 0;
+    Faz com que o item cresça quando tiver espaço para crescer
+    Mude o nome da classe para ver
+    */
+
+    /*flex-shrink: 0;*/
+    /*
+    default: no value;
+    Maiores valores faz com que o item fique menor primeiro quando responsivo
+    */
+
+    /*flex-basis: 150px;*/
+    /*
+    default: no value;
+    seta o width do item
+    */
+
+    /*
+    Flex é um "atalho" para os 3 parametros
+    1º parameter: flex-grow
+    2º parameter: flex-shrink
+    3º parameter: flex-basis
+    nao use "," para separar os parametros
+    */
+    /*flex: 1 5;*/
+
+    /*align-self: center;*/
+    /*
+    default: align-self: flex-start;
+    functiona como o align-items porém para o item em específico
+    */
+
+    /*order: -1;*/
+    /*
+    default: 0;
+    para 3 itens: 
+    -1 primeiro
+    0 segundo
+    1 terceiro
+    seta a posição do item para aparecer em ordem de prioridade
+    e nao na ordem do html
+    nao é recomendado utilizar isso, é mais facil mudar o html
+    */
+}
