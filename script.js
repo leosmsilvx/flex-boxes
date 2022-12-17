@@ -59,18 +59,10 @@ function reset(){
     var item2 = document.getElementById("item-2");
     var item3 = document.getElementById("item-3");
 
-    mainElement.style.flexDirection = "row";
-    mainElement.style.justifyContent = "start";
-    mainElement.style.alignItems = "flex-start";
-    mainElement.style.gap = "5px";
-
-    item1.style.alignSelf = "flex-start";
-    item2.style.alignSelf = "flex-start";
-    item3.style.alignSelf = "flex-start";
-
-    item1.style.flexGrow = 0;
-    item2.style.flexGrow = 0;
-    item3.style.flexGrow = 0;
+    mainElement.attributeStyleMap.clear();
+    item1.attributeStyleMap.clear();
+    item2.attributeStyleMap.clear();
+    item3.attributeStyleMap.clear();
 
     changeTxtStyle();
 }
