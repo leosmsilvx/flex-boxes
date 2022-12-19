@@ -59,10 +59,26 @@ function reset(){
     var item2 = document.getElementById("item-2");
     var item3 = document.getElementById("item-3");
 
+    //Reset attributes
     mainElement.attributeStyleMap.clear();
     item1.attributeStyleMap.clear();
     item2.attributeStyleMap.clear();
     item3.attributeStyleMap.clear();
+
+    //Set the "default" gap
+    mainElement.style.gap = "5px";
+
+    //Fix inputs
+    document.getElementById("gap").value = 5;
+    document.getElementById("grow-1").value = 0;
+    document.getElementById("grow-2").value = 0;
+    document.getElementById("grow-3").value = 0;
+
+        
+    document.getElementById("gapValue").text = "5px";
+    document.getElementById("grow-1-value").text = 0;    
+    document.getElementById("grow-2-value").text = 0;    
+    document.getElementById("grow-3-value").text = 0;
 
     changeTxtStyle();
 }
