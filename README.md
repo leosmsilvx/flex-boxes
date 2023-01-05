@@ -7,7 +7,7 @@ Still not responsive for mobile.
 
 ## Preview
 - ### index
-![alt text](/imgs/preview.png)
+![alt text](/imgs/index.png)
 
 ## Code explaning - PT_BR
 - ### container
