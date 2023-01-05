@@ -48,9 +48,7 @@ function changeTxtStyle(){
                "align-items: " + alignItems + "; " +
                "gap: " + gap + ";"
 
-    console.log(text);
-
-    txtStyle.text = text;
+    txtStyle.value = text;
 }
 
 function reset(){
@@ -81,4 +79,17 @@ function reset(){
     document.getElementById("grow-3-value").text = 0;
 
     changeTxtStyle();
+}
+
+function copy(){
+    var campo = document.getElementById("style-text");
+
+    campo.select();
+    campo.setSelectionRange(0, 99999); // Mobile
+
+    var formatedText = campo.value;
+    formatedText = formatedText.replaceAll("; ", ";\n"); 
+    console.log(formatedText);
+
+    navigator.clipboard.writeText(formatedText);
 }
