@@ -211,6 +211,17 @@ body{
     
 }
 
+#copy-text{
+    position: fixed;
+    bottom: 50px;
+    color: white;
+    background-color:#2a2a2a;
+    opacity: 0;
+    padding: 20px;
+    border-radius: 30px;
+    transition: opacity 1s;
+}
+
 /*Main css*/
 
 #container-1{    

@@ -1,3 +1,4 @@
+
 function clickStyle(classe, property, value){
     if(property == "flex-direction")
         document.getElementById(classe).style.flexDirection = value;
@@ -43,7 +44,8 @@ function changeTxtStyle(){
     var justifyContent = style.getPropertyValue("justify-content");
     var alignItems = style.getPropertyValue("align-items");
     var gap = style.getPropertyValue("gap");
-    var text = "flex-direction: " + flexDirection + "; " +
+    var text = "display: flex; " +
+               "flex-direction: " + flexDirection + "; " +
                "justify-content: " + justifyContent + "; " +
                "align-items: " + alignItems + "; " +
                "gap: " + gap + ";"
@@ -71,7 +73,6 @@ function reset(){
     document.getElementById("grow-1").value = 0;
     document.getElementById("grow-2").value = 0;
     document.getElementById("grow-3").value = 0;
-
         
     document.getElementById("gapValue").text = "5px";
     document.getElementById("grow-1-value").text = 0;    
@@ -81,7 +82,9 @@ function reset(){
     changeTxtStyle();
 }
 
-function copy(){
+function copy(){   
+    var copyPop = document.getElementById("copy-text");
+    copyPop.style.opacity = .95;
     var campo = document.getElementById("style-text");
 
     campo.select();
@@ -89,7 +92,9 @@ function copy(){
 
     var formatedText = campo.value;
     formatedText = formatedText.replaceAll("; ", ";\n"); 
-    console.log(formatedText);
 
     navigator.clipboard.writeText(formatedText);
+    setTimeout(() => {
+        copyPop.style.opacity = 0;
+    }, 2000);
 }
